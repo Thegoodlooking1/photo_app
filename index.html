@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Color Averager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Photo Color Averager</h1>
+
+        <p class="description">
+            Upload up to 10 photos and find the 5 most representative
+            colors across the entire group.
+        </p>
+
+        <!-- Upload area -->
+        <div id="drop-area" class="drop-area">
+
+            <input 
+                type="file" 
+                id="file-input" 
+                accept="image/*" 
+                multiple
+                hidden
+            >
+
+            <button id="upload-button">
+                Choose Photos
+            </button>
+
+            <p>or drag and drop your photos here</p>
+
+            <span id="file-count">
+                No photos selected
+            </span>
+
+        </div>
+
+        <!-- Image previews -->
+        <div id="preview-container" class="preview-container"></div>
+
+        <!-- Analyze button -->
+        <button id="analyze-button" disabled>
+            Analyze Colors
+        </button>
+
+        <!-- Results -->
+        <section id="results" class="results hidden">
+
+            <h2>5 Most Representative Colors</h2>
+
+            <div id="color-results" class="color-results"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Upload */
+
+.drop-area {
+    margin-top: 40px;
+    padding: 50px;
+    border: 2px dashed #bbb;
+    border-radius: 20px;
+    text-align: center;
+    background: white;
+    transition: 0.2s;
+}
+
+.drop-area.dragging {
+    border-color: black;
+    background: #eee;
+}
+
+#upload-button,
+#analyze-button {
+    border: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#upload-button {
+    background: black;
+    color: white;
+}
+
+#analyze-button {
+    margin-top: 30px;
+    background: black;
+    color: white;
+}
+
+#analyze-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#file-count {
+    display: block;
+    margin-top: 15px;
+    color: #777;
+}
+
+/* Image previews */
+
+.preview-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.preview-container img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Results */
+
+.results {
+    margin-top: 60px;
+}
+
+.hidden {
+    display: none;
+}
+
+.color-results {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.color-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.color-swatch {
+    height: 180px;
+}
+
+.color-info {
+    padding: 15px;
+}
+
+.color-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.color-value {
+    margin-top: 5px;
+    color: #666;
+    font-family: monospace;
+}
+
+.color-percentage {
+    margin-top: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .preview-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .color-results {
+        grid-template-columns: 1fr;
+    }
+
+}
